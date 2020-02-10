@@ -1,23 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header, Footer, theme, GlobalStyles } from './globals';
+import styled, { ThemeProvider } from 'styled-components';
+import { Router } from '@reach/router';
+import { Home, Random, Search } from './pages';
+
+const RouterWrapper = styled.div`
+  min-height: calc(100vh - 90px);
+  padding: 1px 0;
+  background: ${(props) => props.theme.colors.second};
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ width: '100%', height: '100%' }}>
+      <ThemeProvider theme={theme || {}}>
+        <Header />
+        <RouterWrapper>
+          <Router>
+            <Home path="/" />
+            <Random path="/random" />
+            <Search path="/search" />
+          </Router>
+        </RouterWrapper>
+        <Footer author="Lusca" />
+        <GlobalStyles />
+      </ThemeProvider>
     </div>
   );
 }
