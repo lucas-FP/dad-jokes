@@ -4,7 +4,7 @@ import Icon from '../assets/icon.png';
 import { Link } from '@reach/router';
 
 const HeaderContainer = styled.header`
-  background-color: ${(props) => props.theme.colors.second};
+  background-color: ${(props) => props.theme.colors.secondLight};
   height: 50px;
   display: flex;
 `;

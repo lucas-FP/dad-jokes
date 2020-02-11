@@ -1,12 +1,13 @@
 import React from 'react';
 import { Header, Footer, theme, GlobalStyles } from './globals';
 import styled, { ThemeProvider } from 'styled-components';
-import { Router, Link } from '@reach/router';
+import { Router } from '@reach/router';
 import { Home, Random, Search } from './pages';
 
 const RouterWrapper = styled.div`
-  height: calc(100vh - 90px);
-  padding: 1px;
+  min-height: calc(100vh - 90px);
+  padding: 1px 0;
+  background: ${(props) => props.theme.colors.second};
 `;
 
 function App() {

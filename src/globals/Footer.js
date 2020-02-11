@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-  background-color: ${(props) => props.theme.colors.second};
+  background-color: ${(props) => props.theme.colors.secondLight};
   height: 40px;
-  padding: 5px;
-  color: ${(props) => props.theme.colors.secondLight};
+  padding: 5px 0;
 `;
 
 const AuthorSpan = styled.span`
-  color: ${(props) => props.theme.colors.secondLighter};
   float: right;
 `;
 

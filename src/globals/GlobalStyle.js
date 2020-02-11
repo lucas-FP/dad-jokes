@@ -9,6 +9,8 @@ font-family:${(props) => props.theme.fonts.main}
 
 h1,h2,h3{
     color:${(props) => props.theme.colors.main};
+    text-transform: uppercase;
+    font-family:${(props) => props.theme.fonts.second}
 }
 
 `;
