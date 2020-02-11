@@ -20,6 +20,7 @@ function App() {
             <Home path="/" />
             <Random path="/random" />
             <Search path="/search" />
+            <Search path="/search/:searchTerm" />
           </Router>
         </RouterWrapper>
         <Footer author="Lusca" />

@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { Frame, Button } from '../components';
-
-const Title = styled.h2`
-  margin: 30px;
-`;
+import { Frame, Button, PageTitle } from '../components';
 
 const FlexColumn = styled.div`
   display: flex;
@@ -43,7 +39,7 @@ export function Random() {
 
   return (
     <div>
-      <Title>Random Dad Joke!</Title>
+      <PageTitle>Random Dad Joke!</PageTitle>
       <FlexColumn>
         <Frame>{joke ? <p>{joke}</p> : 'Loading your joke...'}</Frame>
         <Button onClick={handleClick} disabled={loading}>
